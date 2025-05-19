@@ -11,8 +11,30 @@
 
   - name: start and enable mysql server
     ansible.builtin.service:
-       name:  mysql
+       name:  mysqld
        state: started
        enabled:  yes 
+
+
+  - name: install Mysql Libraries
+    ansible.builtin.pip:
+      name: PyMySQL
+      executalble: pip3.9 
+	  
+	  
+	  
+	  
+	  
+  - name: connect to mysql server
+    community.mysql.mysql_info:
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: mysql.iitsmyroot82.fun
+    register: mysqlinfo
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "mysql info: {{ mysqlinfo }}"  
+      
   
  
