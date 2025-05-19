@@ -26,13 +26,23 @@
 
   - name: connect to mysql server
     community.mysql.mysql_user:
-      name: root
-      password: ExpenseApp@1
       login_user: root
       login_password: "{{ mysql_root_password }}"
       login_host: mysql.itsmyroot82.fun
     register: mysqlinfo
     ignore_errors: true
+
+
+  - name: Create MySQL user
+    community.mysql.mysql_user:
+     name: root
+     password: ExpenseApp@1
+    host: "%"
+    priv: '*.*:ALL'
+    login_user: root
+    login_password: rootpass
+    login_host: 127.0.0.1
+    login_port: 3306
 
   - name: print the output
     ansible.builtin.debug:
