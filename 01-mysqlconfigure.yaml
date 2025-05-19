@@ -7,9 +7,9 @@
     ansible.builtin.package:
        name: mysql
        state: installed
-       register: mysql info
+       register: mysqlinfo
 
   - name: print the output
     ansible.builtin.debug:
-    msg: "mysql info: {{ mysql info }}"  
+    msg: "mysql info: {{ mysqlinfo }}"  
   
