@@ -7,8 +7,15 @@
     ansible.builtin.package:
        name: mysql
        state: installed
+    
+  
+  - name: connect to mysql server
+    community.mysql_service:
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: mysql.iitsmyroot82.fun
     register: mysqlinfo
-
+    
   - name: print the output
     ansible.builtin.debug:
       msg: "mysql info: {{ mysqlinfo }}"  
