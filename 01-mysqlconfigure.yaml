@@ -16,14 +16,12 @@
        enabled:  yes 
 
 
-  - name: install Mysql Libraries
-    ansible.builtin.pip:
-      name: PyMySQL
-      executalble: pip3.9 
+  #- name: install Mysql Libraries
+   # ansible.builtin.pip:
+    #  name: PyMySQL
+     # executalble: pip3.9 
 	  
-	  
-	  
-	  
+	  	  
 	  
   - name: connect to mysql server
     community.mysql.mysql_info:
