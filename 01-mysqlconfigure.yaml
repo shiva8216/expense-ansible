@@ -13,7 +13,7 @@
     ansible.builtin.service:
        name: mysqld
        state: started
-       enabled: yes  
+       enabled:  yes  
   
   - name: connect to mysql server
     community.mysql.mysql_info:
