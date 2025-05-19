@@ -29,7 +29,6 @@
       login_user: root
       login_password: "{{ mysql_root_password }}"
       login_host: mysql.itsmyroot82.fun
-      login_port: 3306
     register: mysqlinfo
     ignore_errors: true
 
