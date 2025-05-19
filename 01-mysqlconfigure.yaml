@@ -13,16 +13,6 @@
     ansible.builtin.service:
        name: mysqld
        state: started
-       enabled:  yes  
+       enabled:  yes 
   
-  - name: connect to mysql server
-    community.mysql.mysql_info:
-      login_user: root
-      login_password: ExpenseApp@1
-      login_host: mysql.iitsmyroot82.fun
-    register: mysqlinfo
-
-  - name: print the output
-    ansible.builtin.debug:
-      msg: "mysql info: {{ mysqlinfo }}"  
-  
+ 
