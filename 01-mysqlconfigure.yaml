@@ -1,0 +1,15 @@
+- name: Install mysql
+  hosts: mysql
+  become: yes
+  
+  tasks:
+  - name : Install mysql server on mysql server
+    ansible.builtin.package:
+       name: mysql
+       state: installed
+       register: mysql info
+
+  - name: print the output
+    ansible.builtin.debug:
+    msg: "Mysql info : {{ mysql info }}"  
+  
