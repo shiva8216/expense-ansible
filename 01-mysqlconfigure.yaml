@@ -37,12 +37,9 @@
     community.mysql.mysql_user:
      name: root
      password: ExpenseApp@1
-    host: "%"
-    priv: '*.*:ALL'
-    login_user: root
-    login_password: rootpass
-    login_host: 127.0.0.1
-    login_port: 3306
+     host: "%"
+     priv: '*.*:ALL'
+ 
 
   - name: print the output
     ansible.builtin.debug:
