@@ -4,7 +4,7 @@
   tasks:
   - name: Install mysql server on mysql server
     ansible.builtin.package:
-       name: mysql
+       name: mysql-server
        state: installed
 
 - name: Start service mysql, if not started
