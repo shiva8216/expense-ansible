@@ -8,12 +8,12 @@
       name: PyMySQL
       executalble: pip3.9
 
-  - name : Install mysql server on mysql server
+  - name: Install mysql server on mysql server
     ansible.builtin.package:
        name: mysql
        state: installed
 
-       
+
   - name: start and enable mysql server
     ansible.builtin.service:
        name: mysqld
