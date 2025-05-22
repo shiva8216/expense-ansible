@@ -14,7 +14,7 @@
      state: present
   
   - name : add expense user
-    ansible.builtin.user:
+    ansible.builtin.command:
       name: expense
       register: command_result
 
