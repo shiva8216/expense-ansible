@@ -53,16 +53,12 @@
     - cryptography
     - PyMySQL
 
-  - name: import mysql data
+  - name: connect to mysql server
     community.mysql.mysql_info:
-      state: import
-      name: all
       login_user: root
-      user: expense
       login_password: ExpenseApp@1
       login_host: mysql.itsmyroot82.fun
       login_port: 3306
-      target: /app/schema/backend.sql
 
   - name: daemon reload and restart service
     ansible.builtin.systemd_service:
