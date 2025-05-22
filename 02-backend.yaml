@@ -64,13 +64,7 @@
       login_password: ExpenseApp@1
       login_host: mysql.itsmyroot82.fun
       login_port: 3306
-      register: mysqlinfo
-      ignore_errors: true
       target: /app/schema/backend.sql
 
-  - name: print the output
-    ansible.builtin.debug:
-      msg: "mysql info: {{ mysqlinfo }}" 
-
-
+  
     
