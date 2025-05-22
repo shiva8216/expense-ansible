@@ -45,20 +45,15 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
-  - name: install python libs
-    ansible.builtin.pip:
-      name: "{{ item }}"
-      executable: pip3.9
-    loop:
-    - cryptography
-    - PyMySQL
-
+  
   - name: connect to mysql server
     community.mysql.mysql_info:
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.itsmyroot82.fun
-      login_port: 3306
+      login_password: ExpenseApp@1
+      login_host: mysql.daws82s.online
+      target: /app/schema/backend.sql
 
   - name: daemon reload and restart service
     ansible.builtin.systemd_service:
