@@ -50,9 +50,9 @@
   - name: isntall python Libraries
     ansible.builtin.pip:
       name: PyMySQL
-      excutable: pip3.9
+     
 
-      
+
   - name: import mysql datea
     community.mysql.mysql_db:
       state: import
