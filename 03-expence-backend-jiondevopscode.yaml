@@ -54,7 +54,7 @@
     - PyMySQL
 
   - name: import mysql data
-    community.mysql.mysql_db:
+    community.mysql.mysql_info:
       state: import
       name: all
       login_user: root
