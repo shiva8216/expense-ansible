@@ -47,12 +47,7 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
-  - name: install python Libraries
-    ansible.builtin.pip:
-      name: "{{ item }}"
-      excutable: pip3.9
-    loop:
-        - PyMySQL
+ 
 
 
   - name: import mysql datea
