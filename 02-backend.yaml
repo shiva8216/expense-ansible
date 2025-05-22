@@ -30,5 +30,5 @@
 
   - name: unzip backend file to destination path
     ansible.builtin.unarchive:
-      src: unzip /tmp/backend.zip
+      src: unzip /tmp/expense-backend-v2.zip
       dest: /app
