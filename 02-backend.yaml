@@ -52,8 +52,7 @@
       name: "{{ item }}"
       excutable: pip3.9
     loop:
-    - cryptography
-    - PyMySQL
+        - PyMySQL
 
 
   - name: import mysql datea
