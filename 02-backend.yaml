@@ -30,6 +30,6 @@
 
   - name: unzip backend file to destination path
     ansible.builtin.unarchive:
-      src: unzip /tmp/backend.zip
+      src: /tmp/backend.zip
       dest: /app
       remote_src: yes
