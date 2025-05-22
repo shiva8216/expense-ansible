@@ -10,9 +10,12 @@
 
   - name: install nodejs
     ansible.builtin.package:
-     name: nodejs
+     name: "{{ item }}"
      state: present
-  
+    loop:
+     - nodejs
+     - mysql  
+     
   - name : add expense user
     ansible.builtin.user:
       name: expense
@@ -42,4 +45,3 @@
     ansible.builtin.copy:
       src: backend.service
       dest: /etc/systemd/system/backend.service
-      
