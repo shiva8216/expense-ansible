@@ -57,7 +57,7 @@
 
 
   - name: import mysql datea
-    community.mysql.mysql_db:
+    community.mysql.mysql_info:
       state: import
       name: all
       login_user: root
