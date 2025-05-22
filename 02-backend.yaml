@@ -70,7 +70,6 @@
       login_user: root
       login_password: ExpenseApp@1
       login_host: mysql.itsmyroot82.fun
-      login_port: 3306
       target: /app/schema/backend.sql
 
   
