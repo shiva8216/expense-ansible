@@ -15,6 +15,7 @@
     loop:
      - nodejs
      - mysql  
+     - PyMySQL
 
   - name : add expense user
     ansible.builtin.user:
