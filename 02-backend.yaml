@@ -47,7 +47,7 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
-  - name: install Mysql Libraries
+  - name: install python Libraries
     ansible.builtin.pip:
       name: "{{ item }}"
       
@@ -57,7 +57,7 @@
 
 
   - name: import mysql datea
-    community.mysql.mysql_info:
+    community.mysql.mysql_db:
       state: import
       name: all
       login_user: root
