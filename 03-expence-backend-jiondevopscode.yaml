@@ -51,8 +51,8 @@
       state: import
       name: all
       login_user: root
-      login_password: ExpenseApp@1
-      login_host: mysql.daws82s.online
+      login_password:  ExpenseApp@1
+      login_host: db.itsmyroot82.fun
       target: /app/schema/backend.sql
 
   - name: daemon reload and restart service
