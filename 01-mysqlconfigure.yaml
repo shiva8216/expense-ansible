@@ -26,6 +26,6 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: ExpenseApp@1
-      login_host: mysql.itsmyroot82.fun
+      login_host: db.itsmyroot82.fun
     
 
