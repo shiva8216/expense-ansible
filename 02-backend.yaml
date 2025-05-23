@@ -51,8 +51,7 @@
   - name: install python Libraries
     ansible.builtin.pip:
       name: "{{ item }}"
-      excutable: pip3.9
-           
+                 
     loop:
     - cryptography
     - PyMySQL
