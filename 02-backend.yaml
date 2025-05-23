@@ -14,7 +14,8 @@
      state: present
     loop:
      - nodejs
-     - mysql  
+     - mysql 
+     - PyMySQL 
      
 
   - name : add expense user
