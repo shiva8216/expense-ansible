@@ -10,11 +10,8 @@
         - database
         - application
         - veb
-
-   
-    
-  tasks:
-    - name: Install AWS Python libraries
+      tasks:
+       - name: Install AWS Python libraries
       ansible.builtin.pip:
       name: "{{ item }}"
       loop:
