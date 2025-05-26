@@ -10,14 +10,7 @@
         - database
         - application
         - veb
-      tasks:
-       - name: Install AWS Python libraries
-         ansible.builtin.pip:
-         name: "{{ item }}"
-      loop:
-        - boto3
-        - botocore
-
+      
         - name: create ec2_instances
           amazon.aws.ec2_instance:
             name: "{{ item }}"
