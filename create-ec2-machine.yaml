@@ -10,7 +10,6 @@
         - database
         - application
         - veb
-      
         - name: create ec2_instances
           amazon.aws.ec2_instance:
             name: "{{ item }}"
