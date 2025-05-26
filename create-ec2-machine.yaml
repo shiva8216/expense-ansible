@@ -7,9 +7,9 @@
       ami_id: ami-09c813fb71547fc4f
       instance_type: t3.micro
       instances:
-        - mysql1
-        - backend1
-        - frontend1
+        - database
+        - application
+        - veb
   tasks:
     - name: create ec2_instances
       amazon.aws.ec2_instances:
@@ -19,4 +19,4 @@
         image_id: "{{ ami_id }}"
         instance_type: "{{ instance_type }}"
       loop: "{{ instances }}"
-        w
+        
