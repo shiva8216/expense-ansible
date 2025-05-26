@@ -12,9 +12,9 @@
         - veb
       tasks:
        - name: Install AWS Python libraries
-      ansible.builtin.pip:
-      name: "{{ item }}"
-      loop:
+         ansible.builtin.pip:
+         name: "{{ item }}"
+     loop:
         - boto3
         - botocore
 
